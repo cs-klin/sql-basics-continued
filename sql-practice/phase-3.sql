@@ -49,6 +49,8 @@ SELECT * FROM coffee_orders;
 
 UPDATE customers SET points = points + 3 WHERE name = "Monica";
 INSERT INTO coffee_orders DEFAULT VALUES;
+INSERT INTO coffee_orders DEFAULT VALUES;
+INSERT INTO coffee_orders DEFAULT VALUES;
 
 SELECT points FROM customers WHERE name = "Phoebe";
 UPDATE customers SET points = points + 1 WHERE name = "Phoebe";
@@ -72,3 +74,18 @@ INSERT INTO coffee_orders DEFAULT VALUES;
 SELECT points from customers WHERE name='Monica';
 INSERT INTO coffee_orders (is_redeemed) VALUES (TRUE);
 UPDATE customers SET points = points - 10 WHERE name='Monica';
+
+--15:
+DELETE FROM customers WHERE id=5;
+
+--16:
+SELECT points from customers WHERE name='Ross';
+UPDATE customers SET points = points + 1 WHERE name='Ross';
+INSERT INTO coffee_orders DEFAULT VALUES;
+
+--17:
+SELECT points from customers WHERE name='Joey';
+UPDATE customers SET points = points + 1 WHERE name='Joey';
+INSERT INTO coffee_orders DEFAULT VALUES;
+
+UPDATE customers SET email='p_as_in_phoebe@friends.show' from customers WHERE name='Phoebe';
